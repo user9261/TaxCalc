@@ -33,6 +33,10 @@ namespace TaxCalc
                 int taxPrice = (int)(price * 1.1);
                 this.taxPriceBox.Text = taxPrice.ToString();
             }
+            else  // TryParseが失敗した場合はエラーメッセージを表示
+            {
+                MessageBox.Show("税抜価格を正しく入力してください");
+            }
 
         }
     }
